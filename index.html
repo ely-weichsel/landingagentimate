@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agentimate - The agent who animates your ideas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="animation-container">
+    <div id="animation-canvas"></div>
+    <div class="animation-cursor"></div>
+  </div>
+
+  <header>
+    <div class="logo">
+      <span class="logo-text">agentimate</span>
+      <div class="logo-dot"></div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#demo">Demo</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#start">Get Started</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <h1>The agent who <span class="animated-text">animates</span> your ideas</h1>
+        <p>Describe any animation in your mind, and our AI agent will bring it to life. No coding required.</p>
+        <div class="input-container">
+          <input type="text" id="idea-input" placeholder="Describe your animation idea..." />
+          <button id="animate-btn" class="btn primary">Animate It</button>
+        </div>
+      </div>
+    </section>
+
+    <section id="demo" class="demo-section">
+      <div class="demo-wrapper">
+        <div class="conversation-container">
+          <div class="messages" id="conversation-messages">
+            <!-- Messages will appear here -->
+            <div class="message bot">
+              <div class="avatar">🤖</div>
+              <div class="message-content">
+                <p>Hello! I'm Agentimate, your animation assistant. Tell me what kind of animation you'd like to see, and I'll create it for you!</p>
+              </div>
+            </div>
+          </div>
+          <div class="input-area">
+            <input type="text" id="conversation-input" placeholder="Describe an animation (e.g., 'rotating galaxy')" />
+            <button id="send-message" class="btn primary">Send</button>
+          </div>
+        </div>
+        
+        <div class="animation-showcase" id="animation-showcase">
+          <div class="animation-placeholder">
+            <div id="idea-visualization"></div>
+          </div>
+        </div>
+        
+        <div class="example-buttons">
+          <h3>Try these examples:</h3>
+          <div class="buttons-container">
+            <button class="example-btn" data-example="magicalIdeas">AI Magic</button>
+            <button class="example-btn" data-example="galaxy">Rotating Galaxy</button>
+            <button class="example-btn" data-example="explodingText">Exploding Text</button>
+            <button class="example-btn" data-example="colorWaves">Color Waves</button>
+            <button class="example-btn" data-example="geometricShapes">Geometric Shapes</button>
+            <button class="example-btn" data-example="timeline">Timeline Animation</button>
+            <button class="example-btn" data-example="staggering">Staggered Elements</button>
+            <button class="example-btn" data-example="svgDrawing">SVG Drawing</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="about-content">
+        <h2>How does <span class="highlight">Agentimate</span> work?</h2>
+        <p>Using cutting-edge AI, Agentimate translates your natural language descriptions into beautiful, dynamic animations. Our engine interprets your ideas and generates optimized code in real-time.</p>
+        
+        <div class="process-steps">
+          <div class="process-step">
+            <div class="step-number">1</div>
+            <h3>Describe Your Vision</h3>
+            <p>Use natural language to describe any animation you can imagine.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">2</div>
+            <h3>AI Generation</h3>
+            <p>Our AI agent analyzes your description and creates the animation code.</p>
+          </div>
+          <div class="process-step">
+            <div class="step-number">3</div>
+            <h3>Instant Preview</h3>
+            <p>Watch your idea come to life instantly in the browser.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="start" class="cta">
+      <h2>Ready to bring your ideas to life?</h2>
+      <a href="#" class="btn primary pulse-btn">Get Started Now</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <span>agentimate</span>
+      </div>
+      <div class="copyright">
+        <p>&copy; 2023 Agentimate. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html> 
