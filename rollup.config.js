@@ -1,9 +1,11 @@
 import terser from '@rollup/plugin-terser';
 import filesize from 'rollup-plugin-filesize';
 import ts from 'rollup-plugin-ts';
-import pkg from './package.json' assert { type: 'json' };
 import fs from 'fs';
 import path from 'path';
+
+// Load package.json without using assert
+const pkg = JSON.parse(fs.readFileSync('./package.json', 'utf-8'));
 
 const inputPath = 'src/anime.js';
 const inputPathGUI = 'src/gui/gui.js';

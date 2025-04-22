@@ -1,12 +1,12 @@
 {
-  "name": "animejs",
-  "version": "4.0.1",
-  "homepage": "https://animejs.com",
+  "name": "landingagentimate",
+  "version": "1.0.0",
+  "homepage": "https://landingagentimate.vercel.app",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/juliangarnier/anime.git"
+    "url": "git+https://github.com/ely-weichsel/landingagentimate.git"
   },
-  "description": "JavaScript animation engine",
+  "description": "Agentimate - The agent who animates your ideas",
   "main": "lib/anime.umd.js",
   "module": "lib/anime.esm.js",
   "types": "types/index.d.ts",
@@ -20,15 +20,18 @@
     "./package.json": "./package.json"
   },
   "license": "MIT",
-  "author": "Julian Garnier <hello@julian.gr>",
+  "author": "Ely Weichsel",
   "sideEffects": false,
   "bugs": {
-    "url": "https://github.com/juliangarnier/anime/issues"
+    "url": "https://github.com/ely-weichsel/landingagentimate/issues"
   },
   "files": [
     "lib",
     "types"
   ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "keywords": [
     "anime",
     "anime.js",
@@ -37,7 +40,8 @@
     "CSS",
     "transforms",
     "SVG",
-    "canvas"
+    "canvas",
+    "agentimate"
   ],
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.4",
@@ -53,10 +57,11 @@
   "scripts": {
     "dev": "rollup -c -w",
     "dev-types": "types=true rollup -c -w",
-    "build": "build=true types=true rollup -c",
+    "build": "echo 'Static site ready for deployment'",
     "release": "build=true release=true types=true rollup -c",
     "open-examples": "browser-sync start --startPath examples --server --no-notify --directory --files '**/*.js'",
     "test-browser": "browser-sync start --startPath tests/index.html --server --files '**/*.js' --no-notify --directory",
-    "test-node": "node --allow-natives-syntax \"node_modules/.bin/mocha\" -u tdd --timeout 20000 \"./tests/suites/node.test.js\""
+    "test-node": "node --allow-natives-syntax \"node_modules/.bin/mocha\" -u tdd --timeout 20000 \"./tests/suites/node.test.js\"",
+    "start": "browser-sync start --server --files 'index.html, styles.css, script.js'"
   }
 }
